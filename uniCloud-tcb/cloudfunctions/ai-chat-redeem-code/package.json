@@ -1,0 +1,10 @@
+{
+	"name": "ai-chat-redeem-code",
+	"dependencies": {},
+	"extensions": {
+		"uni-cloud-jql": {}
+	},
+	"dependencies": {
+		"uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
+	}
+}

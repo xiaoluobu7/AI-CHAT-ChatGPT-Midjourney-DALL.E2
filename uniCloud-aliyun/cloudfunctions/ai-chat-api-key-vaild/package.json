@@ -1,0 +1,13 @@
+{
+  "name": "ai-chat-api-key-vaild",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  },
+  "cloudfunction-config": {
+  	"timeout": 500,
+  	"triggers": [],
+  	"path": "/ai-chat-api-key-vaild",
+  	"runtime": "Nodejs12"
+  }
+}

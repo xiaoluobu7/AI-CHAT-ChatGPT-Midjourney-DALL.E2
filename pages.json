@@ -1,0 +1,267 @@
+{
+	"rightWindow": {
+		"path": "pages/common/footer/footer.nvue",
+		"style": {
+			"width": "350px"
+		}
+	},
+	"topWindow": {
+		"path": "windows/top-window.vue",
+		"style": {
+			"height": "60px"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages++
+
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "应用中心",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/ai/ai_chat",
+			"style": {
+				"navigationBarTitleText": "聊天对话",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/ai/ai_chat_in",
+			"style": {
+				"navigationBarTitleText": "AI创作",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/ai/ai_draw",
+			"style": {
+				"navigationBarTitleText": "绘画",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"navigationStyle": "custom"
+			}
+		},
+
+
+		{
+			"path": "pages/me/me",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+
+		}, {
+			"path": "pages/vip/vip",
+			"style": {
+				"navigationBarTitleText": "会员充值",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"navigationStyle": "custom"
+			}
+		},
+
+
+		{
+			"path": "pages/vip/vip_home",
+			"style": {
+				"navigationBarTitleText": "会员",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/job/job",
+			"style": {
+				"navigationBarTitleText": "任务中心",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},{
+			"path": "pages/common/about/about",
+			"style": {
+				"navigationBarTitleText": "AIChat",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff",
+				"navigationBarTextStyle": "black"
+			}
+		},{
+			"path": "pages/common/contact/contact",
+			"style": {
+				"navigationBarTitleText": "AIChat:商务合作",
+				"app-plus": {
+					"titleNView": {
+						"buttons": []
+					}
+				}
+			}
+		} 
+
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "页面",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#fff",
+		"h5": {
+			"maxWidth": 1190,
+			"navigationBarTextStyle": "black",
+			"navigationBarBackgroundColor": "#F1F1F1"
+		}
+	},
+	"subPackages": [
+		{
+			"root": "page_1",
+			"name": "page_1",
+			"independent": false,
+			"pages": [
+
+				{
+					"path": "pages/home/chat",
+					"style": {
+						"navigationBarTitleText": "创作",
+						"enablePullDownRefresh": false,
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/home/qa",
+					"style": {
+						"navigationBarTitleText": "提问记录",
+						"enablePullDownRefresh": false,
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTextStyle": "black"
+					}
+
+				},
+
+
+
+
+				{
+					"path": "pages/login/login",
+					"style": {
+						"navigationBarTitleText": "登录",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+
+				{
+					"path": "pages/register/register",
+					"style": {
+						"navigationBarTitleText": "用户注册",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+
+
+				{
+					"path": "pages/me/profile",
+					"style": {
+						"navigationBarTitleText": "修改用户信息",
+						"enablePullDownRefresh": false,
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/me/center",
+					"style": {
+						"navigationBarTitleText": "设置",
+						"enablePullDownRefresh": false,
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+
+
+				{
+					"path": "pages/invite/invite",
+					"style": {
+						"navigationBarTitleText": "推荐赚钱",
+						"enablePullDownRefresh": false,
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "pages/invite/invite_num",
+					"style": {
+						"navigationBarTitleText": "推荐人数",
+						"enablePullDownRefresh": false,
+						"navigationBarBackgroundColor": "#ffffff",
+						"navigationBarTextStyle": "black"
+					}
+				}
+
+
+
+			]
+		}
+	],
+	"tabBar": {
+		//白色
+		"color": "#999999",
+		"selectedColor": "#686efe",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+
+		"list": [
+
+			{
+				"pagePath": "pages/ai/ai_chat",
+				"iconPath": "static/tabbar/chat.png",
+				"selectedIconPath": "static/tabbar/chat1.png",
+				"text": "聊天"
+			},
+			{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/tabbar/app.png",
+				"selectedIconPath": "static/tabbar/app1.png",
+				"text": "应用"
+			},
+			//需要在底部开启任务的，自己启动就行5.20
+
+			{
+				"pagePath": "pages/ai/ai_draw",
+				"iconPath": "static/tabbar/draw.png",
+				"selectedIconPath": "static/tabbar/draw1.png",
+				"text": "绘画"
+			},
+
+			{
+				"pagePath": "pages/vip/vip_home",
+				"iconPath": "static/tabbar/vip.png",
+				"selectedIconPath": "static/tabbar/vip1.png",
+				"text": "会员"
+			},
+
+			{
+				"pagePath": "pages/me/me",
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "static/tabbar/my1.png",
+				"text": "我的"
+			}
+		]
+	}
+}

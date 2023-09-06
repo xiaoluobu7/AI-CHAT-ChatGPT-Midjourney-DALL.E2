@@ -1,0 +1,83 @@
+{
+    "uni_modules": {
+        "encrypt": [
+            "uniCloud-aliyun/cloudfunctions/ai-chat-reduce-use-times/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-file-down/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-sec-check/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-get-list/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-pay/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-plan/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-openai-draw/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-add-num/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-template/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-api-key-vaild/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-credits/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-open-ai-api/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-redeem-code/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-user-credits/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-draw/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-api-key-err/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-crypt-utils/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-api-key/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-config/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-app-list/index.js",
+            "uniCloud-aliyun/cloudfunctions/ai-chat-common/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-reduce-use-times/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-file-down/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-sec-check/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-get-list/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-pay/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-plan/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-openai-draw/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-add-num/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-template/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-api-key-vaild/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-credits/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-open-ai-api/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-redeem-code/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-user-credits/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-draw/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-api-key-err/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-crypt-utils/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-api-key/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-config/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-app-list/index.js",
+            "uniCloud-tcb/cloudfunctions/ai-chat-common/index.js",
+            "common/combineApi.js",
+            "common/sensitiveWords.js",
+            "common/common.js",
+            "common/requestTool.js",
+            "common/globalConfig.js",
+            "common/constants.js",
+            "store/modules/store.js",
+            "res/en_decrypt.js",
+            "store/index.js"
+        ],
+        "extends": {
+            "sn": "cu8WukbC8fQFPOnq5WeZXYuo79wyYJIcEV+0Xw40nC706Kn+FMAYrelE8qt9uoPgGI4pNiunGLMB1tpRP+wgGrlQcKj3Z5k2fhHVX4iWybKKNu/lMo7ZfB7zqFaFlOxor3hhFcuXmvRHeWn2pZim8BVvX5PyBDlugxSF47nErqEPSvr7//qIACtAdLhCm4V+Lv3sEX6zK30l6tDpNZlDHnexzt1fL4IGquNpoVjPS7nwF72Oq9RES9w8i3dV8w6omuICGlCmfg6T7n3OoBD0/exuVYWmls3ERq38ftzV1tMDfXQK3WBxL297fQ1/Lxhoe70z+nYVi/v6CSjzzzZerg=="
+        }
+    },
+    "id": "xiaoluobu-AIChat",
+    "name": "AIChat：集成ChatGPT、Midjourney、文心一言、DALL.E2",
+    "displayName": "AIChat：集成ChatGPT、Midjourney、文心一言、DALL.E2",
+    "version": "1.0.12",
+    "description": "chatgpt。midjourney。文心一言。多支付和充值方式。多推广方式。多广告位。自定义会员套餐。流式响应。多种安全控制。源码版支持二开。教程完善。免费升级。购买后先联系xiaoluobu7",
+    "keywords": [
+        "chatgpt",
+        "midjourney",
+        "文心一言",
+        "AI智能聊天机器人",
+        "AI绘画"
+    ],
+    "dcloudext": {
+        "category": [
+            "uniCloud",
+            "云端一体项目模板"
+        ]
+    },
+    "dependencies": {
+        "crypto-js": "^4.1.1",
+        "event-source-polyfill": "^1.0.31",
+        "weixin-js-sdk": "^1.6.0"
+    }
+}

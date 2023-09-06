@@ -1,0 +1,13 @@
+{
+  "name": "ai-chat-file-down",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  },
+  "cloudfunction-config": {
+  	"timeout": 500,
+  	"triggers": [],
+  	"path": "/ai-chat-file-down",
+  	"runtime": "Nodejs12"
+  }
+}

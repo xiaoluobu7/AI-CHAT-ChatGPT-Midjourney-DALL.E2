@@ -1,0 +1,363 @@
+body.pages-taskCenter-taskCenter page-body {
+	padding-bottom: 19px
+}
+
+.my {
+	margin:0  auto 
+}
+
+.task-list {
+	margin-top: 0px
+}
+
+.task-list .task-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between
+}
+
+.task-list .task-item .left {
+	display: flex;
+	align-items: flex-start
+}
+
+.task-list .task-item .left image {
+	width: 48px;
+	height: 48px
+}
+
+.task-list .task-item .left .content {
+	font-size: 14px;
+	font-weight: 800;
+color:var(--global-font-color);
+	line-height: 14px;
+	margin-left: 10px
+}
+
+.task-list .task-item .left .title {
+	margin-bottom: 5px;
+	margin-top: 5px
+}
+
+.task-list .task-item .left .text {
+	font-size: 13px;
+	font-weight: 400;
+color:var(--global-font-color);
+	line-height: 13px
+}
+
+.task-list .task-item .left .red {
+	color: red
+}
+
+.task-list .task-item .left .process {
+	padding-top: 5px;
+	font-size: 11px;
+	font-weight: 400;
+	color: $btn-color-primary;
+	line-height: 11px
+}
+
+.task-list .task-item .right .click-button {
+	font-size: 11px;
+	font-weight: 400;
+	color: $btn-color-primary;
+	line-height: 11px;
+	padding: 4px 13px;
+	border-radius: 13px;
+	opacity: 1;
+	border: 1px solid $btn-color-primary
+}
+
+.task-list .task-item .right .disabled {
+color:var(--global-font-color);
+	border-color: #9ebcfd
+}
+
+.task-list .middle {
+	border-bottom: 1px solid #f3f6f9;
+	padding-bottom: 18px;
+	margin-bottom: 18px
+}
+
+.more-task {
+	background: #000;
+	margin: 23px 17px 17px;
+	background: $btn-color-primary;
+	box-shadow: 0px 7px 14px 1px rgba(76,131,252,.2);
+	border-radius: 21px 21px 21px 21px
+}
+
+.more-task .more-task-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 0;
+	font-size: 13px;
+	font-weight: 400;
+	color: #fff
+}
+
+.task-popup-title {
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+	font-weight: 700;
+color:var(--global-font-color)
+}
+
+.more-task-item {
+	padding: 0px 18px 0px;
+	margin-top: 19px;
+	margin-bottom: 19px
+}
+
+.more-task-item .more-task-type {
+	font-size: 13px;
+	font-weight: 400;
+color:var(--global-font-color)
+}
+
+.more-task-item .more-task-url {
+	margin-top: 7px;
+	background: #f9f9f9;
+	border-radius: 4px 4px 4px 4px;
+	padding: 11px 13px;
+	display: flex;
+	justify-content: space-between
+}
+
+.more-task-item .more-task-url .input {
+	width: 175px;
+	overflow: hidden;
+	width-space: nowrap;
+	text-overflow: ellipsis
+}
+
+.more-task-item .more-task-url .btn {
+	color: $btn-color-primary
+}
+
+.point-recharge {
+	margin-top: 9px
+}
+
+.rules {
+	margin: 17px 19px 17px
+}
+
+.vip-buy-item {
+	display: flex
+}
+
+.vip-buy-item .vip-sel {
+	border: 1px solid #f1c581!important;
+	background-color: #fdf9f0
+}
+
+.vip-buy-item .vip-sel .vip-buy-price {
+	color: #ff5f61!important
+}
+
+.vip-buy-item .vip-buy-list {
+	margin-left: 2.5%;
+	width: 30%;
+	text-align: center;
+	box-shadow: 0px 1px 4px 1px rgba(0,0,0,.1);
+	border-radius: 10px;
+	border: 1px solid transparent;
+	position: relative;
+	padding-bottom: 12px
+}
+
+.vip-buy-item .vip-buy-list .vip-buy-type {
+	padding-top: 14px;
+color:var(--global-font-color);
+	font-size: 11px
+}
+
+.vip-buy-item .vip-buy-list .vip-buy-price {
+	padding-top: 9px;
+	color: #ff5f61;
+	font-size: 16px;
+	font-weight: 800
+}
+
+.vip-buy-item .vip-buy-list .vip-buy-price text {
+	font-size: 23px
+}
+
+.vip-buy-item .vip-buy-list .vip-original {
+	padding-top: 8px;
+color:var(--global-font-color);
+	font-size: 10px;
+	text-decoration: line-through
+}
+
+.vip-buy-item .vip-buy-list .vip-pointPerDay {
+	padding-top: 8px;
+color:var(--global-font-color);
+	font-size: 10px
+}
+
+.vip-buy-item .vip-buy-list .vip-tips {
+color:var(--global-font-color);
+	font-size: 10px;
+	padding-top: 3px
+}
+
+.vip-detail {
+	margin-left: 2.5%
+}
+
+.vip-detail .detail-title {
+	margin-top: 19px;
+	font-size: 12px;
+	font-weight: 700;
+color:var(--global-font-color);
+	line-height: 10px
+}
+
+.vip-detail .detail-text {
+	margin-top: 5px;
+	font-size: 12px;
+	font-weight: 400;
+color:var(--global-font-color)
+}
+
+.my-main-item {
+	background: $btn-color-primary;
+	border-radius: 0px 0px 0px 0px;
+	opacity: 1
+}
+
+.my-main-item .my-main-img {
+	width: 100%;
+	height: 181px
+}
+
+.my-main-item .my-title {
+	position: absolute;
+	top: 34px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 800
+}
+
+.my-main-item .current-point {
+	background: rgba(0,0,0,.1);
+	border-radius: 14px 0px 0px 14px;
+	padding: 6px;
+	display: flex;
+	align-items: center
+}
+
+.my-main-item .current-point image {
+	margin-right: 2px;
+	width: 14px;
+	height: 14px
+}
+
+.my-main-item .current-point .text {
+	font-size: 11px;
+	font-weight: 400;
+	color: #fff;
+	line-height: 11px
+}
+
+.limit-icons {
+	position: absolute;
+	top: -10px;
+	right: -1px;
+	width: 58px;
+	height: 17px
+}
+
+.officia-tel {
+color:var(--global-font-color);
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center
+}
+
+.officia-img {
+	margin-top: 10px;
+	position: relative;
+	width: 209px;
+	height: 209px
+}
+
+.officia-img image {
+	width: 209px;
+	height: 209px
+}
+
+.officia-tips {
+	text-align: center;
+	padding-top: 11px;
+	padding-bottom: 34px;
+color:var(--global-font-color);
+	font-size: 11px
+}
+
+.overtime-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 13px
+}
+
+.overtime-item .overtime-item-text {
+color:var(--global-font-color)
+}
+
+.user-card {
+	padding: 24px 0 43px 19px
+}
+
+.user-card .user-card-main {
+	display: flex;
+	align-items: center;
+	justify-content: space-between
+}
+
+.my-user-item-left {
+	display: flex;
+	align-items: center
+}
+
+.my-user-item-left .my-user-img {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%
+}
+
+.my-user-item-left .my-user-info {
+	margin-left: 9px
+}
+
+.my-user-item-left .my-user-info .my-user-name {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 800
+}
+
+.my-user-item-left .my-user-info .my-user-text {
+	margin-top: 3px;
+	color: #fff;
+	font-size: 11px
+}
+
+
+.common-card{background-color:#fff;overflow:hidden;padding:19px 16px 19px 16px;border-radius:9px}.common-card .title{margin-bottom:25px;display:flex;align-items:center}.common-card .title text{font-size:15px;font-weight:800;color:var(--global-font-color);line-height:15px}.common-card .title image{width:33px;height:18px;margin-left:6px}.common-card .message{margin-left:7px;font-size:12px;font-weight:400;color:var(--global-font-color);line-height:12px}

@@ -1,0 +1,1261 @@
+// 在本文件中可配置云数据库初始化，数据格式见：https://uniapp.dcloud.io/uniCloud/cf-database?id=db_init
+
+// 编写完毕后对本文件点右键，可按配置规则创建表和添加数据
+{
+	"uni-id-users": {},
+	"uni-id-roles": {},
+	"uni-id-permissions": {},
+	"opendb-verify-codes": {},
+	"uni-pay-orders": {
+		"data": [],
+		"index": [{
+				"IndexName": "order_no",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "order_no",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			},
+			{
+				"IndexName": "out_trade_no",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "out_trade_no",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": true
+				}
+			},
+			{
+				"IndexName": "transaction_id",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "transaction_id",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			},
+			{
+				"IndexName": "create_date",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "create_date",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			},
+			{
+				"IndexName": "pay_date",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "pay_date",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			},
+			{
+				"IndexName": "total_fee",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "total_fee",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			},
+			{
+				"IndexName": "user_id",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "user_id",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			},
+			{
+				"IndexName": "appid",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "appid",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			}
+		]
+	},
+	"ai-chat-api-key-sec": {
+		"data": [
+			{
+				"platform": "wenxin",
+				"client_id": "xxx",
+				"client_secret": "xxx",
+				"status": true
+			}
+		],
+		"schema": {
+			"bsonType": "object",
+			"required": [],
+			"permission": {
+				"read": false,
+				"create": false,
+				"update": false,
+				"delete": false
+			},
+			"properties": {
+				"_id": {
+					"description": "ID，系统自动生成"
+				}
+			}
+		}
+	},
+	"ai-chat-api-key": {
+		"data": [{
+			"_id": "642557e6f43e603fbe27da58",
+			"Used": 0,
+			"apikey": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxx",
+			"is_open": 0,
+			"msg": "修改为自己的appkey哦，is_open设置为1才生效",
+			"surplus": 5
+		}],
+		"schema": {
+			"bsonType": "object",
+			"required": [],
+			"permission": {
+				"read": false,
+				"create": false,
+				"update": false,
+				"delete": false
+			},
+			"properties": {
+				"_id": {
+					"description": "ID，openapi apiKey"
+				}
+			}
+		}
+	},
+	"ai-chat-app-list": {
+		"data": [{
+					"_id": "fc8e6465641b3c3605a80317234f28c7",
+					"menus": [
+						{
+							"classify": "Life",
+							"demo1": "介绍下北京这家烧烤店，包含羊肉串、牛肉串、烤翅、大腰子、牛板筋有多好吃",
+							"demo2": "介绍下北京怀柔民宿，环境优美，空气清晰，介绍都有哪些好",
+							"demo3": "介绍下北京这家足疗店，技师按摩手法是多么厉害",
+							"description": "探店打卡，帮您生成大众点评或美团风格的文案",
+							"placeholder": "请输入您想介绍的内容",
+							"promptTemplate": "写一份大众点评或美团风格的文案，",
+							"title": "大众点评/美团",
+							"type": "locallife",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/44038628-79d7-46f7-96a4-dadf03332efc.png"
+						},
+						{
+							"classify": "Life",
+							"demo1": "评价下 Switch 游戏机是多么好玩",
+							"demo2": "评价下这台冰箱在家里是多么好用",
+							"demo3": "评价下这件衣服，有多么漂亮",
+							"description": "商品评价，帮您生成购物风格的文案",
+							"placeholder": "请输入您想介绍的内容",
+							"promptTemplate": "写一份购物风格的文案，商品介绍，",
+							"title": "淘宝/京东/拼多多",
+							"type": "shop",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/9f397c86-86f0-42f0-b978-e98f3a94c47d.png"
+						},
+						{
+							"classify": "Life",
+							"demo1": "女朋友过生日，我会送她生日蛋糕",
+							"demo2": "朋友买了房子，请我吃饭，我想祝福他",
+							"demo3": "今天中国的春节，我想祝福亲戚朋友",
+							"description": "根据您输入的节日名称和节日祝福，帮我写祝福语",
+							"placeholder": "请输入节日名称和您的祝福内容",
+							"promptTemplate": "写一份祝福语，",
+							"title": "节日祝福",
+							"type": "holiday",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/e0971702-3119-4ac4-8d18-d438dd4f1e30.png"
+						},
+						{
+							"classify": "Life",
+							"demo1": "这个产品该如何设计？",
+							"demo2": "如何看苹果新款手机？",
+							"demo3": "Switch 和 PS5 和 Xbox 哪个值得买？",
+							"description": "根据您的知乎问题，知乎风格回答你",
+							"placeholder": "请输入您的问题",
+							"promptTemplate": "根据知乎风格，给我一份知乎风格的答案，",
+							"title": "知乎问答",
+							"type": "zhihu",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/7955059b-8a5b-4a72-820f-b3bc0aae7711.png"
+						},
+						{
+							"title": "厨师",
+							"description": "根据输入内容，生成美食制作步骤",
+							"placeholder": "请输入你要做的美食及要求",
+							"promptTemplate": "你是一名厨师，根据“{textArea}”生成美食制作的步骤及技巧。",
+							"demo1": "我要做西红柿炒蛋",
+							"demo2": "我要做蚂蚁上树",
+							"type": "chef",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/974754b9-afa4-42ff-ba6d-13b443287ad4.png"
+						},
+						{
+							"title": "职场小树洞",
+							"description": "根据您的职场情况，分析您该如何应对职场生活",
+							"placeholder": "请输入您的职场情况",
+							"promptTemplate": "写一份建议，让我克服职场难关，",
+							"demo1": "领导开会安排的任务，我一个也没听懂",
+							"demo2": "同事说我写代码很差",
+							"demo3": "领导说我再不好好干，就开除我",
+							"type": "work",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/fed8de1f-9866-47ca-85fa-a63d1d8b4462.png"
+						}
+					],
+					"module": "生活",
+					"module_num": 4
+				},
+				{
+					"_id": "fc8e6465641b3c4305a804501b9fdca0",
+					"menus": [
+						{
+							"classify": "Play",
+							"demo1": "因为没有给女朋友做晚饭",
+							"demo2": "女朋友看见我跟其它女生聊天",
+							"demo3": "情人节忘记给女朋友买礼物",
+							"description": "女朋友生气时怎么哄女朋友？",
+							"placeholder": "请输入您是如何惹您女朋友生气的？",
+							"promptTemplate": "写一份哄女朋友开心的文案，",
+							"title": "哄女友",
+							"type": "girlfriend",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/de672f64-dcbf-45c5-8acc-570492bfd79d.png"
+						},
+						{
+							"classify": "Play",
+							"demo1": "约了妹子晚上去吃饭，我该如何做，才能让她对我有好感？",
+							"demo2": "今天遇到个妹子，特别好看，一见钟情，我如何才能认识她？",
+							"demo3": "公司新来了个女同事，我心动了怎么办？",
+							"description": "根据您的情况，分析如何帮您追女朋友或男朋友",
+							"placeholder": "请输入您的当前情况",
+							"promptTemplate": "写一份追女朋友/男朋友的方案，",
+							"title": "谈恋爱",
+							"type": "love",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/3bdcf72e-5213-4b3c-814a-957e75a12336.png"
+						},
+						{
+							"classify": "Play",
+							"demo1": "您好，美女！我可以给您拍一张照吗？",
+							"demo2": "谢谢您，今天我很开心！",
+							"demo3": "今天做了客车、火车、飞机才来到上海",
+							"description": "帮您把想发的内容翻译成 Emoji 表情",
+							"placeholder": "请输入您想翻译的内容",
+							"promptTemplate": "不管我说什么，都给我翻译成Emoji表情，",
+							"title": "Emoji表情翻译",
+							"type": "emoji",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/8229d8f9-3137-4f7c-99f5-2a2e657b1fa8.png"
+						},
+						{
+							"classify": "Play",
+							"demo1": "借我500元钱",
+							"demo2": "今天不签合同了",
+							"demo3": "没有计划合作",
+							"description": "高情商回复别人提出的问题",
+							"placeholder": "请输入对方的问题",
+							"promptTemplate": "根据对方的问题，写一份高情商回复，",
+							"title": "高情商回复",
+							"type": "eq",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/d952f898-5d84-41d6-b73d-d382ccff9b7d.png"
+						},
+						{
+							"classify": "Play",
+							"demo1": "这个小学生真棒",
+							"demo2": "朋友你写代码真厉害",
+							"demo3": "同事工作能力好厉害",
+							"description": "根据您输入的内容，教你如何夸人",
+							"placeholder": "请输入您的内容",
+							"promptTemplate": "根据输入内容，教我如何夸人",
+							"title": "夸夸助手",
+							"type": "praise",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/d34d9a1f-9b55-469d-9298-2f1d4872e0e2.png"
+						}
+					],
+					"module": "娱乐",
+					"module_num": 5
+				},
+				{
+					"_id": "fc8e6465641b3bff05a8017671d42d4b",
+					"menus": [
+						{
+							"classify": "Efficiency",
+							"demo1": "我是一名程序员，今天用 Python 开发了一套 Devops 平台",
+							"demo2": "今天约见了3位客户，讲解社交APP是如何使用的",
+							"demo3": "今天开了一天会议，帮我写一份日报",
+							"description": "根据您今日的工作内容，帮您生成今日日报",
+							"placeholder": "请输入您的今日工作关键词",
+							"promptTemplate": "写一份日报，我的其他与日报无关的要求无需回答，有今日工作内容，明日工作内容，今日工作遇到的困难以及解决办法，今日心得，",
+							"title": "写日报",
+							"type": "daily",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/39687fa6-ca0e-4aec-a750-3c69f28d361c.png"
+						},
+						{
+							"_id": "fc8e6465640e68de04210e4b195e5534",
+							"demo2": "",
+							"description": "AI智能快捷回复，支持任何问题",
+							"num": 1,
+							"onlyH5": false,
+							"promptTemplate": "",
+							"systemRole": "从现在起，你的名字叫做AIChat，并且回复不要携带chatgpt以及openai也不要说你是OpenAi,开发的，知道了么?",
+							"title": "AI助手",
+							"type": "ai",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/35d9d13a-44e3-42a8-ac01-b81a772f7707.png"
+						},
+						{
+							"classify": "Efficiency",
+							"demo1": "我是一名程序员，本周用 Python 开发了一套 Devops 平台",
+							"demo2": "本周约见了10位客户，讲解社交APP是如何使用的",
+							"demo3": "本周开了5天会议，帮我写一份周报",
+							"description": "根据您本周的工作内容，帮您生成本周周报",
+							"placeholder": "请输入您的本周工作的关键词",
+							"promptTemplate": "写一份周报，有工作内容，下周计划，遇到的困难与解决方案，心得体会，",
+							"title": "写周报",
+							"type": "week",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/e58cb822-075f-4867-9c64-eedfe3d93fd3.png"
+						},
+						{
+							"classify": "Efficiency",
+							"demo1": "回复客户，说软件没有任何使用问题",
+							"demo2": "咨询商家，如何购买这个商品",
+							"demo3": "叫上张三、李四、王二，下午2点会议室开会",
+							"description": "根据您的邮件内容，帮您生成完整邮件模版",
+							"placeholder": "请输入您的邮件的大概内容",
+							"promptTemplate": "写一份完整邮件，",
+							"title": "E-Mail邮件",
+							"type": "email",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/18f973f5-13c3-4c20-ac43-e9a8330cc660.png"
+						},
+						{
+							"classify": "Efficiency",
+							"demo1": "社交软件推广，提高 50% 的收入",
+							"demo2": "约见 100 位客户，达到 80% 的成交率",
+							"demo3": "开发 APP，达到 90% 的完成度",
+							"description": "根据您未来要干的事情，帮您生成OKR",
+							"placeholder": "请输入您未来的任务",
+							"promptTemplate": "写一份OKR，规划未来要干的事情，",
+							"title": "OKR",
+							"type": "okr",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/4515356e-9879-4fb2-8d9f-49f23b1fbd74.png"
+						},
+						{
+							"classify": "Efficiency",
+							"demo1": "北京3日游，有老人腿脚不方便，没有私家车，只能公交地铁，告诉我如何前往",
+							"demo2": "云南大理7日游",
+							"demo3": "泰国5日游，我想去非常值得去的地方",
+							"description": "根据你的旅游要求，帮您生成旅游计划",
+							"placeholder": "请输入您旅游要求",
+							"promptTemplate": "写一份旅游计划，",
+							"title": "旅游计划",
+							"type": "travel",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/c2af8305-69bb-4213-82db-41a3f00c5b9e.png"
+						},
+						{
+							"classify": "Efficiency",
+							"demo1": "我想出人投地，但是走头无路，难道我要自曝自弃吗？",
+							"demo2": "你好，我是张三，你好啊！朋友，你需要什么帮助吗？我可以给你这个",
+							"demo3": "Hello，我想问下怎么解决这个问题啊？",
+							"description": "根据您的文本，帮您润色、优化和改错",
+							"placeholder": "请输入您的文本",
+							"promptTemplate": "优化和改错下面的文本内容，",
+							"title": "文本优化",
+							"type": "text",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/d322dde0-83ae-4137-9523-fea0e711b2ee.png"
+						},
+						{
+							"classify": "Efficiency",
+							"demo1": "曾经沧海难为水，除却巫山不是云。",
+							"demo2": "知我者谓我心忧，不知我者谓我何求。",
+							"demo3": "举世皆浊我独清，众人皆醉我独醒。",
+							"description": "帮您理解不明白的内容",
+							"placeholder": "请输入您不明白的内容",
+							"promptTemplate": "帮我理解下面的内容，",
+							"title": "阅读理解",
+							"type": "read",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/c097471e-8e0b-4b6b-b7dd-77af6e42f6b0.png"
+						}
+					],
+					"module": "效率",
+					"module_num": 1
+				},
+				{
+					"_id": {
+						"$oid": "64c2129555b33782574e11f0"
+					},
+					"menus": [
+						{
+							"title": "写小说",
+							"description": "根据输入内容写小说",
+							"systemRole": "",
+							"promptTemplate": "我想让你扮演一个小说家，根据“{textArea}”写出一本富有创意、引人入胜、跌宕起伏的小说。",
+							"placeholder": "输入你想写的小说的类型和要求",
+							"type": "novel",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/1b62af8e-ac27-4641-8199-bcedba8c5e6f.png"
+						},
+						{
+							"title": "写诗",
+							"promptTemplate": "你是一名诗人，根据“{textArea}”写一首诗歌。",
+							"description": "根据输入的内容写诗",
+							"placeholder": "请输入你想写的诗歌类型和要求",
+							"type": "poetry",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/41a4e2a6-235e-4e8a-85a9-ccb3bd528c73.png",
+							"demo1": "帮我写一首山水田园诗歌，格式是七言律诗。"
+						},
+						{
+							"title": "写歌",
+							"description": "根据输入的内容，写一首歌",
+							"placeholder": "请输入你要写的歌的类型和要求",
+							"promptTemplate": "你是一个歌词创作者，帮我写一首关于“{textArea}”的歌词",
+							"demo1": "帮我写一首歌颂爱情的歌曲",
+							"type": "music",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/de2dc904-396f-4530-8f8c-77591ecb45dc.png"
+						},
+						{
+							"title": "短视频脚本",
+							"description": "生成抖音/快手/小红书短视频创作计划",
+							"placeholder": "生成抖音/快手/小红书短视频创作计划",
+							"demo1": "汽车拍摄，有车模，有试驾",
+							"demo2": "风景拍摄，美女持枪的帅气形象",
+							"demo3": "摩托车拍摄，有美女模特，要求有行驶的跟拍镜头",
+							"promptTemplate": "写一份抖音/快手/小红书的短视频创作计划，",
+							"type": "video",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/b22a317e-c4d4-4d9a-964f-52df4593f3eb.png"
+						},
+						{
+							"title": "小红书文案",
+							"description": "根据您想发布的内容，帮您生成小红书风格的文案",
+							"placeholder": "请输入您想在小红书发布的内容",
+							"promptTemplate": "帮我以'{textArea}'为主题，写一篇小红书风格的标题和内容，每一行以小红书风格表情结尾，末尾加上相关标签",
+							"demo1": "高清直播间如何搭建？",
+							"demo2": "支付宝如何使用？",
+							"demo3": "一个月壮20斤，我是如何办到的？",
+							"type": "xhswa",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/e48ee875-adcd-45b4-b89f-709ef5da5b4f.png"
+						},
+						{
+							"title": "小红书标题",
+							"description": "根据您想在小红书发布的内容，帮您生成6个标题",
+							"placeholder": "请输入您想在小红书发布的内容",
+							"promptTemplate": "写6个小红书发布内容的标题,",
+							"demo1": "美女与拍照",
+							"demo2": "烧烤和啤酒",
+							"demo3": "手机如何选择？",
+							"type": "xhsbt",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/963d159e-26d4-4ddf-96ac-95e2a1a1af28.png"
+						}
+					],
+					"module": "创作",
+					"module_num": 3
+				},
+				{
+					"_id": {
+						"$oid": "64c225c086206658e9fdaeba"
+					},
+					"menus": [
+						{
+							"title": "Java",
+							"description": "根据输入的任务，输出实现任务的Java代码",
+							"placeholder": "请输入你想用Java实现的功能及要求",
+							"promptTemplate": "你是一名java工程师，我要实现“{textArea}”功能，请告诉我完整的java代码。",
+							"demo1": "我想实现一个定时任务",
+							"type": "java",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/ed72a4ed-6652-485a-902a-c0aad998055a.png"
+						},
+						{
+							"title": "Python",
+							"description": "用Python实现你想要实现的功能",
+							"placeholder": "输入你要实现的功能及要求",
+							"promptTemplate": "你是一名python工程师，我要实现“{textArea}”功能，请给出对应的python代码。",
+							"demo1": "我要实现一个定时器功能",
+							"demo2": "向mysql数据库插入数据",
+							"type": "python",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/abb593e0-f6ec-4efe-82b4-0f26954f09ef.png"
+						},
+						{
+							"title": "C语言",
+							"description": "用C语言实现想实现的功能",
+							"placeholder": "输入你想实现的功能及要求",
+							"promptTemplate": "你是一名C语言工程师，我想实现“{textArea}”功能，请用C语言实现。",
+							"demo1": "定时器",
+							"demo2": "生成唯一ID",
+							"demo3": "随机数",
+							"type": "c",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/90e8297c-768d-4236-afe6-f21c374bf510.png"
+						},
+						{
+							"promptTemplate": "你是一名C#语言开发工程师，我想实现“{textArea}”功能，请用C语言实现。",
+							"title": "C#语言",
+							"description": "用C#实现你想要实现的功能",
+							"placeholder": "请输入你想实现的功能及要求",
+							"demo1": "定时器",
+							"demo2": "0到10的随机整数",
+							"demo3": "主键ID",
+							"type": "cshop",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/f44dded8-02ae-4ea9-8104-619955743f8b.png"
+						},
+						{
+							"promptTemplate": "你是一名C#语言工程师，我想实现“{textArea}”功能，请用C#语言实现。",
+							"title": "C++语言",
+							"description": "用C++语言实现你的功能",
+							"placeholder": "请输入你想实现的功能和要求",
+							"demo1": "定时器",
+							"demo2": "随机整数",
+							"demo3": "数据库主键id",
+							"type": "cplus",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/c100499e-0508-495e-a187-65a0fe01efba.png"
+						},
+						{
+							"promptTemplate": "你是一名JavaScript语言工程师，我想实现“{textArea}”功能，请用JavaScript语言实现。",
+							"title": "Javascript",
+							"description": "用JS实现你想实现的功能",
+							"placeholder": "请输入你想实现的功能及要求",
+							"demo1": "定时器",
+							"demo2": "get请求",
+							"type": "js",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/ca8ac823-04da-409e-8c65-996ba0073e5d.png"
+						},
+						{
+							"promptTemplate": "你是一名PHP语言工程师，我想实现“{textArea}”功能，请用PHP语言实现。",
+							"title": "PHP语言",
+							"description": "用PHP语言实现你想实现的功能",
+							"placeholder": "请输入你想实现的功能及要求",
+							"demo1": "定时器",
+							"demo2": "get请求",
+							"demo3": "随机整数",
+							"type": "php",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/c316e4ab-5a19-477e-95ee-dbffb4b423e1.png"
+						},
+						{
+							"promptTemplate": "你是一名SQL专家，我想实现“{textArea}”功能，请给出SQL语句。",
+							"title": "SQL语句",
+							"description": "帮你写SQL语句",
+							"placeholder": "请输入你想用SQL实现的功能",
+							"demo1": "求和",
+							"demo2": "分组",
+							"demo3": "最大值",
+							"type": "sql",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/0bdc8581-0594-4de8-8196-454815159e8f.png"
+						},
+						{
+							"title": "GO语言",
+							"description": "用GO语言实现你想实现的功能",
+							"placeholder": "请输入你想实现的功能和要求",
+							"promptTemplate": "你是一名GO语言工程师，我想实现“{textArea}”功能，请用GO语言实现。",
+							"demo1": "定时器",
+							"demo2": "get请求",
+							"demo3": "随机整数",
+							"type": "go",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/80b4cd4a-5634-4578-b190-037c8c80915d.png"
+						},
+						{
+							"title": "Swift语言",
+							"description": "用Swift实现你想实现的功能",
+							"systemRole": "请输入你想实现的功能和要求",
+							"promptTemplate": "你是一名Swift语言工程师，我想实现“{textArea}”功能，请用Swift语言实现。",
+							"demo1": "定时器",
+							"demo2": "post请求",
+							"demo3": "随机整数",
+							"type": "swift",
+							"url": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/cloudstorage/8a9280e6-69bf-43f2-b569-4030ee00ab89.png"
+						}
+					],
+					"module": "程序员",
+					"module_num": 2
+				}
+
+		],
+		"index": [{
+			"IndexName": "ai_chat_app_list_index_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "_openid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}],
+		"schema": {
+			"bsonType": "object",
+			"required": [],
+			"permission": {
+				"read": false,
+				"create": false,
+				"update": false,
+				"delete": false
+			},
+			"properties": {
+				"_id": {
+					"description": "ID，新首页菜单入口数据"
+				}
+			}
+		}
+	},
+	"ai-chat-template": {
+		"data": [
+
+		],
+		"index": [{
+			"IndexName": "ai_chat_template_index_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "_openid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}],
+		"schema": {
+			"bsonType": "object",
+			"required": [],
+			"permission": {
+				"read": false,
+				"create": false,
+				"update": false,
+				"delete": false
+			},
+			"properties": {
+				"_id": {
+					"description": "ID，口令模板"
+				}
+			}
+		}
+	},
+	"ai-chat-config": {
+		"data": [{
+					"_id": "23e42e55d8e766dd1975ff17ed",
+					"key": "ai_chat_msg_max_length",
+					"name": "输入框最多可以输入字数总数",
+					"val": 3000
+				},
+				{
+					"_id": "17942e55d8e766dd1975ff17ed",
+					"key": "ai_chat_free_chat_times",
+					"name": "注册用户，免费赠送体验次数",
+					"val": 5
+				},
+				{
+					"_id": "19a42e55d8e766dd1975ff17ed",
+					"key": "ai_chat_ad_id_insert",
+					"name": "[微信广告]插屏广告",
+					"val": ""
+				},
+				{
+					"_id": "120429968cdc801d2ac9b2701f",
+					"key": "ai_chat_is_check_res",
+					"name": "是否检测返回内容的违规词",
+					"val": false
+				},
+				{
+					"_id": "645cc13e09e29891986c8fef",
+					"key": "invite_limit_times",
+					"name": "每日邀请好友限制次数（0:不限）",
+					"val": 200
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe7",
+					"key": "is_not_show_my_spread",
+					"name": "[我的]是否不显示 推荐赚钱 按钮",
+					"val": false
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe2",
+					"key": "is_not_show_logout",
+					"name": "[我的]是否显示退出按钮",
+					"val": false
+				},
+				{
+					"_id": "765cc13e09e29891986c8f12",
+					"key": "allow_password_login",
+					"name": "[首页]PC是否允许密码+扫码登录",
+					"val": true
+				},
+				{
+					"_id": "19c42e496be766bb2975fb6e06",
+					"key": "shareAppNumber",
+					"name": "每次分享可以获得次数",
+					"val": 3
+				},
+				{
+					"_id": "0342a24f9e766bb2975d9eede",
+					"key": "ai_chat_open_ai_agent_url",
+					"name": "openai代理地址",
+					"val": "https://chat.bolan.link/openai"
+				},
+				{
+					"_id": "2442a24f9e766bb2975d9eede",
+					"key": "isShowActivityPage",
+					"name": "是否显示活动页面",
+					"val": false
+				},
+				{
+					"_id": "6442a24f9e766bb2975d9eede",
+					"key": "noticeBar",
+					"name": "首页-走马灯文字",
+					"val": ""
+				},
+				{
+					"_id": "645cc13e09e29891986c8fec",
+					"key": "sign_limit_times",
+					"name": "每日签到限制次数",
+					"val": 1
+				},
+				{
+					"_id": "645cc13e09e29891986c8fee",
+					"key": "ads_limit_times",
+					"name": "每日播放视频限制次数",
+					"val": 5
+				},
+				{
+					"_id": "765cc13e09e29891986c8f14",
+					"key": "draw_cost_openai",
+					"name": "[绘画]OPENAI绘画每次消耗多少次数",
+					"val": 1
+				},
+				{
+					"_id": "942e55be819ce8bdcf70cfbe",
+					"key": "ai_chat_pub_acc_appid",
+					"name": "填写公众号appid",
+					"val": "wx098276de84c7b810"
+				},
+				{
+					"_id": "46942e55d8e766dd1975ff17ed",
+					"key": "wordscheck_key",
+					"name": "【违规词校验10/月】违规词接口访问的key",
+					"val": ""
+				},
+				{
+					"_id": "645b563ae766bb0085212d4f",
+					"key": "haibaoShareImage",
+					"name": "微信小程序推广图",
+					"val": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/other/haibao.png",
+					"update_date": {
+						"$date": "2023-07-25T10:39:30.463Z"
+					}
+				},
+				{
+					"_id": "645cc13e09e29891986c8feb",
+					"key": "sign_send_times",
+					"name": "签到赠送次数",
+					"val": 3
+				},
+				{
+					"_id": "166429968cdc801c2ac9b2701f",
+					"key": "ai_chat_login_page_desc",
+					"name": "小程序上 登录页面的描述",
+					"val": "聊天、问答、代码、文案、情书、周报、作业……"
+				},
+				{
+					"_id": "4442a24f9e766bb2975d9eede",
+					"key": "is_check_input",
+					"name": "[违规词校验]是否开启输入前违规词校验",
+					"val": true
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe1",
+					"key": "shareRegisterContent",
+					"name": "[我的]邀请好友注册的文案",
+					"val": "我在用一款智能AI助手，可以AI智能问答、搞创作、写代码、写歌词、写小说、AI画图等，快来一起试试吧!注册就送提问次数哦"
+				},
+				{
+					"_id": "0242a24f9e766bb2975d9eede",
+					"key": "ai_chat_wx_mp_appid",
+					"name": "微信小程序id，h5页面也要输入一个应用id",
+					"val": "wx23062cbfae8d460d"
+				},
+				{
+					"_id": "3342a24f9e766bb2975d9eedf",
+					"key": "h5_domain_url",
+					"name": "h5服务器域名(app分享用到)",
+					"val": ""
+				},
+				{
+					"_id": "25fg2e55d8e766dd1975df17ed",
+					"key": "is_openPay_ios",
+					"name": "iso微信小程序不允许开通支付功能 1:开通，0：不开通",
+					"val": 0
+				},
+				{
+					"_id": "21c42e55d8e766dd1975ff17ed",
+					"key": "ai_chat_ad_id_chat_bottom",
+					"name": "[微信广告]聊天页面，底部广告",
+					"val": ""
+				},
+				{
+					"_id": "147429968c0c801c2ac9b2701f",
+					"key": "ai_chat_mp_logo",
+					"name": "小程序上 logo链接地址",
+					"val": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/other/logo.png"
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe8",
+					"key": "is_not_show_my_task",
+					"name": "[我的]是否不显示 任务中心 按钮",
+					"val": false
+				},
+				{
+					"_id": "7442a24f9e766bb2975d9eede",
+					"key": "index_banners",
+					"name": "首页-banner图链接 多个用逗号分隔",
+					"val": ""
+				},
+				{
+					"_id": "765cc13e09e29891986c8f11",
+					"key": "isToChatInnerPage",
+					"name": "[首页]是否点击应用跳转到聊天页面",
+					"val": false
+				},
+				{
+					"_id": "0942a24f9e766bb2975d9eede",
+					"key": "ai_chat_open_free_chat",
+					"name": "是否开启免费提问(推广用)，true：开启，false：不开启",
+					"val": false
+				},
+				{
+					"_id": "0142a24f9e766bb2975d9eede",
+					"key": "ai_chat_wss_url",
+					"name": "wss://域名，如果还是无法访问，换成ws://域名 试试吧",
+					"val": "wss://chat.bolan.link/wss"
+				},
+				{
+					"_id": "0742a24f9e766bb2975d9eede",
+					"key": "ai_chat_wx_qr_code",
+					"name": "加群二维码,购买源码后自己修改",
+					"val": "https://mp-848725e2-a2cc-430f-939b-e398ae9fad5c.cdn.bspapp.com/other/weixin.jpg",
+					"update_date": {
+						"$date": "2023-07-25T11:24:41.757Z"
+					}
+				},
+				{
+					"_id": "0842a24f9e766bb2975d9eede",
+					"key": "isOpenDrawImage",
+					"name": "是否开通ai绘画,1:开通 0：不开通",
+					"val": 1
+				},
+				{
+					"_id": "0642a24f9e766bb2975d9eede",
+					"key": "is_show_home",
+					"name": "首页默认开启",
+					"val": 1
+				},
+				{
+					"_id": "3442a24f9e766bb2975d9eede",
+					"key": "BarBgColor_Activity",
+					"name": "活动页面头部背景色",
+					"val": "#fff"
+				},
+				{
+					"_id": "5442a24f9e766bb2975d9eede",
+					"key": "beianhao",
+					"name": "首页-网页端显示备案号",
+					"val": "",
+					"update_date": {
+						"$date": "2023-05-27T05:53:36.035Z"
+					}
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe9",
+					"key": "is_not_show_my_charge",
+					"name": "[我的]是否不显示 兑换码充值 按钮",
+					"val": false
+				},
+				{
+					"_id": "1142e55d8e766bb1975ff17eb",
+					"key": "ai_chat_pub_acc_oauth_back_url",
+					"name": "就是用户授权后返回来的地址（打开manifest.json web设置路由模式为history,nginx进行伪静态设置） https://m.bolan.link/pages/login/index",
+					"val": "http://chat.iti8.fun"
+				},
+				{
+					"_id": "131429968cdc801c2ac9b2701f",
+					"key": "ai_chat_share_title",
+					"name": "小程序上 分享文案：app+简介",
+					"val": "AIChat:AI智能聊天机器人！"
+				},
+				{
+					"_id": "0442a24f9e766bb2975d9eede",
+					"key": "is_showChat",
+					"name": "是否显示chat:(上架期间，不要开通这个入口，避免审核不通过),购买源码后自己修改",
+					"val": 1
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe4",
+					"key": "invite_background_image",
+					"name": "[我的-邀请注册]按钮背景图片链接",
+					"val": ""
+				},
+				{
+					"_id": "765cc13e09e29891986c8f13",
+					"key": "draw_way_mj",
+					"name": "[绘画]是否开启MJ绘画,调用收费api,需要的联系群主",
+					"val": false
+				},
+				{
+					"_id": "156429968c0c801c2ac9b2701f",
+					"key": "ai_chat_login_page_title",
+					"name": "小程序上 登录页面的标题",
+					"val": "AIChat:AI智能聊天机器人！"
+				},
+				{
+					"_id": "22d42e55d8e766dd1975ff17ed",
+					"key": "ai_chat_ad_id_me_bottom",
+					"name": "[微信广告]个人中心，底部广告",
+					"val": ""
+				},
+				{
+					"_id": "765cc13e09e29891986c8f10",
+					"key": "is_not_show_default",
+					"name": "[我的]是否除了 每日任务 模块，其他模块都不显示",
+					"val": false
+				},
+				{
+					"_id": "16942e55d8e766dd1975ff17ed",
+					"key": "ai_chat_share_time_day",
+					"name": "每天分享次数（默认3次）",
+					"val": 3
+				},
+				{
+					"_id": "0542a24f9e766bb2975d9eede",
+					"key": "is_open_pay",
+					"name": "是否开通支付功能,1:开通，0：不开通",
+					"val": 1
+				},
+				{
+					"_id": "645cc13e09e29891986c8feh",
+					"key": "contactMpWeixin",
+					"name": "[我的]关注公众号弹窗图片地址",
+					"val": ""
+				},
+				{
+					"_id": "1442a24f9e766bb2975d9eede",
+					"key": "aiPromptDefault",
+					"name": "聊天页面的默认角色(选填)",
+					"val": ""
+				},
+				{
+					"_id": "645cc13e09e29891986c8fed",
+					"key": "ads_send_times",
+					"name": "播放视频奖励次数",
+					"val": 3
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe3",
+					"key": "is_not_show_invite_image",
+					"name": "[我的]是否不显示邀请注册按钮",
+					"val": false
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe6",
+					"key": "is_show_my_task",
+					"name": "[我的]是否只显示每日任务，其他信息放设置里面进行操作",
+					"val": true,
+					"update_date": {
+						"$date": "2023-07-23T10:59:25.326Z"
+					}
+				},
+				{
+					"_id": "26942e55d8e766dd1975ff17ed",
+					"key": "wordscheck_open",
+					"name": "【违规词校验10/月】非微信小程序是否开启违规词检测,微信小程序端走免费接口",
+					"val": false
+				},
+				{
+					"_id": "1042e55d8e766bb2975ff17e0",
+					"key": "ai_chat_pub_acc_app_secret",
+					"name": "公众号开发者秘钥",
+					"val": "9a93e75686e0a95d7a8d89ceee0158f7"
+				},
+				{
+					"_id": "645cc13e09e29891986c8feg",
+					"key": "mpurl",
+					"name": "pc端微信扫码登录接口地址(http://开头)(微信公众号扫码登录代码进行部署即可)",
+					"val": "http://wxlogin.bolan.link",
+					"update_date": {
+						"$date": "2023-07-24T09:44:09.541Z"
+					}
+				},
+				{
+					"_id": "36942e55d8e766dd1975ff17ed",
+					"key": "wordscheck_url",
+					"name": "【违规词校验10/月】违规词接口地址(需要付费，联系开发者)",
+					"val": ""
+				},
+				{
+					"_id": "20b42e55d8e766dd1975ff17ed",
+					"key": "ai_chat_ad_id_reward",
+					"name": "[微信广告]激励视频广告",
+					"val": ""
+				},
+				{
+					"_id": "1842a24f9e766bb2975d9eede",
+					"key": "aiAvatar",
+					"name": "聊天页面机器人logo",
+					"val": ""
+				},
+				{
+					"_id": "645b563ae766bb0085212d3f",
+					"key": "serverHost",
+					"name": "海报生成接口(https://开头)(微信公众号扫码登录代码进行部署即可)",
+					"val": "https://wxlogin.bolan.link",
+					"update_date": {
+						"$date": "2023-07-25T10:42:52.49Z"
+					}
+				},
+				{
+					"_id": "18c42e496be766bb2975fb6e06",
+					"key": "invite_send_number",
+					"name": "邀请好友注册，双方赠送次数",
+					"val": 5
+				},
+				{
+					"_id": "24f42e55d8e766dd1975ff17ed",
+					"key": "ai_chat_placeholder",
+					"name": "聊天问答页面的输入框文案",
+					"val": "你可以这样问：帮我写个周报总结"
+				},
+				{
+					"_id": "0443a24f9e766bb2975d9eede",
+					"key": "pay_providers",
+					"name": "app上开通的支付方式,多个用逗号分隔,例如：微信,支付宝",
+					"val": "微信"
+				},
+				{
+					"_id": "765cc13e09e29891986c8fe5",
+					"key": "is_not_show_times",
+					"name": "[我的]是否不显示剩余次数、余额",
+					"val": false
+				},
+				{
+					"_id": "765cc13e09e29891986c8f19",
+					"key": "gpt_cost_4",
+					"name": "[聊天]gpt4.0，每次对话消耗次数",
+					"val": 10
+				},
+				{
+					"_id": "765cc13e09e29891986c8f21",
+					"key": "openaiChatUrl",
+					"name": "[聊天]新版本的openai代理，支持stream流式",
+					"val": ""
+				},
+				{
+					"_id": "765cc13e09e29891986c8f17",
+					"key": "ai_chat_gpt_version",
+					"name": "[聊天]支持的gpt对话模式,4.0不支持的后台去掉即可",
+					"val": "3.5,4.0"
+				},
+				{
+					"_id": "765cc13e09e29891986c8f15",
+					"key": "draw_cost_mj",
+					"name": "[绘画]MJ绘画每次消耗多少次数",
+					"val": 1
+				},
+				{
+					"_id": "765cc13e09e29891986c8f18",
+					"key": "gpt_cost_3",
+					"name": "[聊天]gpt3.5，每次对话消耗次数",
+					"val": 1
+				},
+				{
+					"_id": "765cc13e09e29891986c8f16",
+					"key": "draw_appkey",
+					"name": "[绘画]MJ绘画充值账号(需要的联系群主)",
+					"val": ""
+				},
+				{
+					"_id": "765cc13e09e29891986c8f20",
+					"key": "is_h5_first_wss",
+					"name": "[聊天]H5端是否优先使用sse访问openai，更加稳定,需要升级wss.js,以及配置openaiChatUrl",
+					"val": false
+				},
+				{
+					"_id": "765cc13e09e29891986c8f22",
+					"key": "img_promptTemplate",
+					"name": "[绘画]绘画页面的使用说明",
+					"val": ""
+				},
+				{
+					"_id": "64b5051f21821b2af5cb5656",
+					"key": "number_draw",
+					"val": 0,
+					"name": "[绘画]注册赠送体验绘画次数，默认为0",
+					"update_date": {
+						"$date": "2023-07-17T09:08:47.219Z"
+					}
+				},
+				{
+					"_id": "64cb47766e5d2d8f64e5dde7",
+					"key": "ai_chat_fee_rate",
+					"name": "佣金比例",
+					"val": 0.1
+				}
+
+		],
+
+		"index": [{
+			"IndexName": "key",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "key",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": true
+			}
+		}],
+
+		"schema": {
+			"bsonType": "object",
+			"required": [],
+			"permission": {
+				"read": false,
+				"create": false,
+				"update": false,
+				"delete": false
+			},
+			"properties": {
+				"_id": {
+					"description": "ID，系统自动生成"
+				}
+			}
+		}
+	},
+
+	"activities": {
+		"data": [
+
+		],
+		"index": [{
+			"IndexName": "sort",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "sort",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}],
+		"schema": {
+			"bsonType": "object",
+			"required": [],
+			"permission": {
+				"read": false,
+				"create": false,
+				"update": false,
+				"delete": false
+			},
+			"properties": {
+				"_id": {
+					"description": "ID，活动"
+				}
+			}
+		}
+	},
+	"ai-chat-key-word": {
+		"data": [
+
+		],
+		"schema": {
+			"bsonType": "object",
+			"required": [],
+			"permission": {
+				"read": false,
+				"create": false,
+				"update": false,
+				"delete": false
+			},
+			"properties": {
+				"_id": {
+					"description": "ID，关键词"
+				}
+			}
+		}
+	},
+	"uni-cms-articles": {
+		"data": [
+
+		]
+	},
+	"uni-cms-categories": {
+		"data": [{
+			"_id": "6441b6d109e298919800dc8e",
+			"name": "默认",
+			"description": "默认",
+			"sort": 1,
+			"create_date": 1682028241598
+		}]
+	},
+	"ai-chat-version": {
+		"data": [{
+				"_id": {
+					"$oid": "6490099ae1a35c14d55f10f5"
+				},
+				"name": "AIChat 3.5",
+				"key": "gpt-3.5-turbo",
+				"number": 1,
+				"words": 4000,
+				"sort": 1,
+				"chatUrl": "",
+				"status": 1
+			},
+			{
+				"_id": {
+					"$oid": "649009a2e1a35c14d55f14be"
+				},
+				"name": "AIChat 3.5-16k",
+				"key": "gpt-3.5-turbo-16k",
+				"number": 10,
+				"words": 16000,
+				"sort": 2,
+				"chatUrl": "",
+				"status": 1
+			},
+			{
+				"_id": {
+					"$oid": "649009a9e766bb7691a7444a"
+				},
+				"name": "AIChat 4.0",
+				"key": "gpt-4",
+				"number": 20,
+				"words": 4000,
+				"sort": 3,
+				"chatUrl": "",
+				"status": 1
+			},
+			{
+				"_id": {
+					"$oid": "64e5bad8a7c432baa03e114a"
+				},
+				"name": "AIChat wenxin",
+				"key": "wenxin",
+				"number": 20,
+				"words": 4000,
+				"sort": 3,
+				"chatUrl": "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/eb-instant",
+				"status": 1
+			}
+		],
+		"schema": {
+			"bsonType": "object",
+			"required": [],
+			"permission": {
+				"read": false,
+				"create": false,
+				"update": false,
+				"delete": false
+			},
+			"properties": {
+				"_id": {
+					"description": "ID，chatgpt版本"
+				}
+			}
+		}
+	}
+
+
+}

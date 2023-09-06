@@ -1,0 +1,14 @@
+{
+	"name": "ai-chat-open-ai-api",
+	"dependencies": {},
+	"extensions": {},
+	"cloudfunction-config": {
+		"timeout": 500,
+		"triggers": [],
+		"path": "/getChat2",
+		"runtime": "Nodejs12"
+	},
+	"dependencies": {
+		"uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
+	}
+}

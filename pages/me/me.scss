@@ -1,0 +1,435 @@
+
+ 
+	uni-button{
+		background-color: transparent;
+	} 
+		.user_main .vip_unlock {
+			background: linear-gradient(120deg, #e3f9fd, #e3f9fd 20%, #e3f9fd 90%);
+			position: relative;
+			z-index: 9;
+			margin: 0px 22px 0 22px;
+			height: 82px;
+			overflow: hidden;
+			border-radius: 16px 16px 0 0;
+			box-shadow: 0 6px 8px rgba(107, 55, 20, .08);
+			
+		}
+	
+		.user_main .vip_unlock .unlock_box {
+			display: flex;
+			padding: 0 16px;
+			height: 73px;
+			flex-direction: row;
+		}
+	
+	    .user_main .vip_unlock .unlock_box .unlock_left{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.user_main .vip_unlock .unlock_box .unlock_left uni-image {
+			height: 48px;
+			width: 48px;
+			vertical-align: middle;
+		}
+		
+		.user_main .vip_unlock .unlock_box .unlock_left .title {
+			flex: 2;//格子占比
+			z-index: 9;
+			margin-left: 10px;
+		}
+	 
+		.user_main .vip_unlock .unlock_box .unlock_left .h1 {
+			font-size: 16px;
+			line-height: 16px;
+			font-weight: 700;
+		color:var(--global-font-color);	
+		}
+		
+		.user_main .vip_unlock .unlock_box .unlock_left .p {
+			padding: 0 3px;
+			font-size: 12px;
+		color:var(--global-font-color);
+			opacity: .8;
+			margin-top: 10px;
+		}
+		
+		
+		.user_main .vip_unlock .unlock_box .unlock_right {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			z-index: 9;
+		}
+		
+		
+	 
+		.user_main .vip_unlock .unlock_box .unlock_right .ubtn.open {
+			border: 1px solid #412203;
+			background: none;
+		color:var(--global-font-color);
+		}
+	
+		.user_main .vip_unlock .unlock_box .unlock_right .ubtn {
+			background: linear-gradient(120deg, #dfb475, #dfb475);
+		color:var(--global-font-color);
+			font-size: 12px;
+			padding: 7px 16px;
+			border-radius: 110px;
+			font-weight: 700;
+			position: relative;
+			overflow: hidden;
+		}
+	
+	
+	.user_main .vip_unlock .unlock_box .unlock_right .ubtn.open {
+	    border: 1px solid #412203;
+	    background: none;
+	   color:var(--global-font-color);
+	}
+	.user_main .vip_unlock .unlock_box .unlock_right .ubtn  {
+	    background: linear-gradient(120deg,#dfb475,#dfb475);
+	   color:var(--global-font-color);
+	    font-size: 12px;
+	    padding: 7px 16px;
+	    border-radius: 110px;
+	    font-weight: 700;
+	    position: relative;
+	    overflow: hidden;
+		
+	}
+	.user_main .vip_unlock .unlock_box .unlock_left  {
+	    flex: 1;
+	    position: relative;
+	    z-index: 9;
+	}
+	
+		.user_main .nav_box {
+			padding: 2px 25px 2px 20px;
+			background: #fff;
+			border-radius: 15px;
+			margin: 0 20px;
+			position: relative;
+			top: -10px;
+			z-index: 9;
+			
+		}
+	
+		.user_main .nav_item {
+			display: flex;
+			padding: 15px 0;
+			position: relative;
+			margin: 5px 0;
+		}
+	
+		.user_main .nav_item .icon {
+			width: 26px;
+			height: 26px;
+			vertical-align: middle;
+			margin-right: 11px;
+			position: relative;
+			top: 1px;
+			opacity: .8;
+			font-size: 22px;
+		}
+	 
+	
+		.text-red,
+		.line-red,
+		.lines-red {
+		color:var(--global-font-color);
+		}
+	
+		.user_main .nav_item .txt {
+			font-size: 14px;
+		color:var(--global-font-color);
+			margin-top: 4px;
+		}
+	
+		.user_main .nav_item:after {
+			content: " ";
+			display: inline-block;
+			height: 6px;
+			width: 6px;
+			border-width: 1px 1px 0 0;
+			border-color: #aaa;
+			border-style: solid;
+			-webkit-transform: matrix(.71, .71, -.71, .71, 0, 0);
+			transform: matrix(.71, .71, -.71, .71, 0, 0);
+			position: absolute;
+			top: 50%;
+			right: 0px;
+			margin-top: -4px;
+		}
+	
+		.txt button {
+			background: transparent;
+			padding: 0;
+			text-align: left;
+			box-sizing: border-box
+		}
+	 
+		view {
+			box-sizing: border-box;
+		}
+	
+		.my {
+			.my-header {
+				padding: 40rpx 35rpx 20rpx;
+	
+				.header {
+					display: flex;
+					align-items: center;
+					justify-content: space-between; 
+					margin: 0 0 40rpx;
+	
+					.headerImg {
+						width: 136rpx;
+						height: 136rpx;
+						margin-right: 25rpx;
+						border-radius: 50%;
+						padding: 0;
+	
+						.headerImg-a {
+							width: 136rpx;
+							height: 136rpx;
+							border-radius: 50%;
+						}
+					}
+	
+					.content {
+						flex: 1;
+						cursor: pointer;
+						.titile {
+							font-size: 40rpx;
+							font-family: PingFang SC;
+							font-weight: bold;
+						color:var(--global-font-color);
+						}
+	
+						.conten {
+							font-size: 26rpx;
+							font-family: PingFang SC;
+						color:var(--global-font-color);
+						}
+					}
+	
+					.shezhi {
+						width: 40rpx;
+						height: 37rpx;
+					}
+					
+				}
+	
+				.member {
+					width: 100%;
+					height: 138rpx;
+					background-size: 100% 100%;
+					padding: 0 40rpx;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+	
+					.title {
+						margin-left: 35rpx;
+						font-size: 36rpx;
+						color: #FFFFFF;
+						flex: 1;
+					}
+	
+					.member-open {
+						width: 146rpx;
+						height: 58rpx;
+						background: #FFFFFF;
+						border-radius: 29rpx;
+						font-size: 28rpx;
+						font-weight: bold;
+						color:var(--global-font-color);
+						text-align: center;
+						line-height: 58rpx;
+					}
+				}
+			}
+	
+			.memberNum {
+				padding: 35rpx;
+	
+				.member-Num {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: 30rpx 40rpx;
+					background-color: #FFFFFF;
+					border-radius: 20rpx;
+	
+					.num-a {
+						text-align: center;
+	
+						.num {
+							font-size: 38rpx;
+							font-family: PingFang SC;
+							font-weight: bold;
+						color:var(--global-font-color);
+							margin-bottom: 15rpx;
+						}
+	
+						.title {
+							font-size: 28rpx;
+						color:var(--global-font-color);
+						}
+					}
+				}
+	
+				.member-code {
+					background-color: #FFFFFF;
+					border-radius: 20rpx;
+	
+	
+	
+					font-weight: normal;
+					margin-bottom: 20rpx;
+	
+					.member-code-list {
+						width: 100%;
+						height: 100rpx;
+						display: flex;
+						align-items: center;
+						background-color: #FFFFFF;
+						padding: 0;
+						border: 0;
+					}
+	
+					.member-code-right {
+						display: flex;
+						align-items: right;
+						margin-left: 220px;
+						background-color: #FFFFFF;
+						padding: 0;
+						border: 0;
+					}
+	
+					.member-button {
+						width: 100%;
+						height: 100rpx;
+						display: flex;
+						align-items: center;
+						background-color: #FFFFFF;
+						padding: 0;
+						border: 0;
+					}
+	
+					button {
+						font-size: 15px;
+						margin-left: 32px;
+					}
+				}
+	
+			}
+		}
+	
+		button::after {
+			border: none;
+		}
+		
+		button{
+			background-color: transparent;
+		}
+	
+	
+		//修改资料弹窗
+		.zai-box {
+			padding: 20px 100upx;
+			min-width: 250px;
+			max-width: 500px;
+			margin: 0 auto;
+			position: relative;
+			background-color: #fff;
+			border-radius: 10px;
+	
+		}
+	
+		.zai-logo {
+			width: 100%;
+			width: 100%;
+			height: 310upx;
+		}
+	
+		.zai-title {
+			top: 0;
+			line-height: 160upx;
+			font-size: 68upx;
+			color: rgba(0, 0, 0, .5);
+			text-align: center;
+			width: 100%;
+		}
+	
+		.zai-form {
+			margin-top: 20upx;
+		}
+	
+		.zai-input {
+			background: #e2f5fc;
+			margin-top: 30upx;
+			border-radius: 100upx;
+			padding: 20upx 40upx;
+			font-size: 30upx;
+		}
+	
+		.input-placeholder,
+		.zai-input {
+		color:var(--global-font-color);
+		}
+	
+		.zai-label {
+			padding: 60upx 0;
+			text-align: center;
+			font-size: 30upx;
+		color:var(--global-font-color);
+		}
+	
+		.zai-btn {
+			background: #3855d5;
+			color: #fff;
+			border: 0;
+			border-radius: 100upx;
+			font-size: 36upx;
+			margin-top: 60upx;
+		}
+	
+		.zai-btn:after {
+			border: 0;
+		}
+	
+		/*按钮点击效果*/
+		.zai-btn.button-hover {
+			transform: translate(1upx, 1upx);
+		}
+		// 兑换按钮
+		.exchange {
+			width: 80px;
+			height:35px;
+			background-color: #f6f9ff;
+			border-radius:5px;
+			text-align:center;
+			line-height: 35px;
+		color:var(--global-font-color);
+			font-size:14px;
+			margin-left:auto;
+		}
+		
+		// 免费获取次数
+		.freequantity {
+			width: 104px;
+			display: flex;
+			align-items: center;
+			background-color: #fff;
+			font-size: 13px;
+			font-weight: 400;
+		color:var(--global-font-color);
+			margin-left:auto;
+		}
+		.freequantityimg{
+			margin-right: 5px;
+		}

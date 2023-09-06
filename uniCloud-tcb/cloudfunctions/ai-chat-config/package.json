@@ -1,0 +1,7 @@
+{
+  "name": "ai-chat-config",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

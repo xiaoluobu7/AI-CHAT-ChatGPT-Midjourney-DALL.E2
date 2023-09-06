@@ -1,0 +1,20 @@
+{
+    "name": "ai-chat-openai-draw",
+    "dependencies": {
+        "uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
+    },
+    "extensions": [],
+    "cloudfunction-config": {
+        "timeout": 500,
+        "triggers": [
+            {
+                "name": "myTrigger",
+                "type": "timer",
+                "config": "5 * * * * * *"
+            }
+        ],
+        "path": "/ai-chat-openai-draw",
+        "runtime": "Nodejs12",
+        "memorySize": 512
+    }
+}

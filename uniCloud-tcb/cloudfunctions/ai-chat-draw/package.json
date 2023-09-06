@@ -1,0 +1,13 @@
+{
+    "name": "ai-chat-draw",
+    "dependencies": {
+        "uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
+    },
+    "extensions": [],
+    "cloudfunction-config": {
+        "timeout": 500,        
+        "path": "/ai-chat-draw",
+        "runtime": "Nodejs12",
+        "memorySize": 512
+    }
+}

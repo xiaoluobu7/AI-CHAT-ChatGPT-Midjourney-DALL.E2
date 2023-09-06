@@ -1,0 +1,160 @@
+<template>
+	<view class="uni-container">
+		<view :class="{'pc-hide': hideList.indexOf(item.url) !== -1  && hasLeftWin}" class="uni-panel"
+			v-for="(item, index) in list" :key="item.id">
+			<view
+				:class="{'left-win-active': leftWinActive === item.url  && hasLeftWin, 'uni-panel-h-on': item.open}"
+				class="uni-panel-h" @click="triggerCollapse(index, item.id)">
+				<text class="uni-panel-text">{{item.name}}</text>
+			</view>
+			<view class="uni-panel-c" v-if="item.open ">
+				<view
+					:class="{'left-win-active': leftWinActive === item2.url  && hasLeftWin, 'pc-hide': hideList.indexOf(item2.url) !== -1  && hasLeftWin}"
+					class="uni-navigate-item" v-for="(item2,key) in item.pages" :key="key" @click="goDetailPage(item2)">
+					<text class="uni-navigate-text">{{item2.name ? item2.name : item2}}</text>
+					<text class="uni-navigate-icon uni-icon">&#xe470;</text>
+				</view>
+			</view>
+		</view>
+		<view class="uni-panel">
+			<view class="uni-panel-h-on uni-panel-h" >
+				<uni-link href="https://beian.miit.gov.cn" :text="register"></uni-link>
+			</view>
+		</view>
+		<view class="uni-panel">
+			<view class="uni-panel-h-on uni-panel-h" >
+				<text class="uni-panel-text">{{copyright}}</text>
+			</view>
+		</view>
+		<view class="uni-panel">
+			<view class="uni-panel-h-on uni-panel-h" >
+				<text class="uni-panel-text">版权所有 {{companyName}}</text>
+			</view>
+		</view>
+	</view>
+</template>
+<script>
+	import config from '@/config/config.js';
+	export default {
+		props: {
+			hasLeftWin: {
+				type: Boolean
+			},
+			leftWinActive: {
+				type: String
+			}
+		},
+		data() {
+			return {
+				simpleName: config.simpleName,
+				fullName: config.fullName,
+				register: config.register,
+				copyright: config.copyright,
+				companyName: config.companyName,
+				hideList: [
+					'ucharts',
+					'nav-city-dropdown'
+				],
+				list: [
+					// #ifdef H5
+					{
+						name: 'AIChat介绍',
+						url: 'about'
+					},
+					{
+						name: '联系我们',
+						url: 'contact'
+					},
+					// #endif
+				]
+			}
+		},
+		// #ifdef H5
+		watch: {
+			$route: {
+				immediate: true,
+				handler(newRoute) {
+					if (newRoute.matched.length) {
+						let path = newRoute.path.split('/')[3]
+						for (const item of this.list) {
+							if (Array.isArray(item.pages)) {
+								for (const page of item.pages) {
+									if (page === path || page.url && page.url === path) {
+										item.open = true
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		// #endif
+		methods: {
+			triggerCollapse(e, id) {
+				if (!this.list[e].pages) {
+					this.goDetailPage(this.list[e].url);
+					return;
+				}
+				for (var i = 0; i < this.list.length; ++i) {
+					if (e === i) {
+						this.list[i].open = !this.list[i].open;
+					} else {
+						this.list[i].open = false;
+					}
+				}
+			},
+			goDetailPage(e) {
+				let path = e.url ? e.url : e;
+				
+				if(~path.indexOf('/hybrid')){
+
+					uni.navigateTo({
+						url: '/pages/outView?backUrl=footer&url='+encodeURIComponent(path)
+					})
+					
+					return;
+				}
+				
+				if(~path.indexOf('friendChain')){
+					
+					uni.switchTab({
+						url: '/pages/ai/ai_chat'
+					})
+					
+					return;
+				}
+				
+				let url = ~path.indexOf('platform') ? path : '/pages/common/' + path + '/' + path;
+				if (this.hasLeftWin) {
+					uni.reLaunch({
+						url: url
+					})
+				} else {
+					uni.navigateTo({
+						url: url
+					})
+				}
+				return false;
+			}
+		}
+	}
+</script>
+
+<style>
+	@import '@/common/uni-nvue.css';
+	.uni-container {
+		padding: 15px;
+		background-color: #f8f8f8;
+		margin: 0px 0px 0px 0px;
+	}
+	
+	.uni-login {
+	    flex: 1;
+	    color: #04498c;
+	    font-size: 14px;
+	    font-weight: normal;
+		align-items: center;
+	}
+	
+</style>
